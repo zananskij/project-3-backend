@@ -1,13 +1,11 @@
 # project-3-backend-repo
 
-<<<<<<< HEAD
 Build a full-crud-app with react
-=======
 Project Theme - Twitter Clone
 
 1.) Full CRUD (Create / Read / Update / Delete)
 2.) Frontend built with React
-3.) Pulls from 2 seperate APIs
+3.) Pulls from 2 seperate APIs (google maps)
 
 Stretch goals
 
@@ -25,4 +23,3 @@ Date posted : String
 
 2nd Model:
 Comments: String
->>>>>>> 14869a722be6b565859590ddeb56afbf0d51aab2
