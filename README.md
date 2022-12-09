@@ -5,7 +5,7 @@ Project Theme - Twitter Clone
 
 1.) Full CRUD (Create / Read / Update / Delete)
 2.) Frontend built with React
-3.) Pulls from 2 seperate APIs
+3.) Pulls from 2 seperate APIs (google maps)
 
 Stretch goals
 
