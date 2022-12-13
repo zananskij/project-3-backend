@@ -49,25 +49,25 @@ app.use(express.json()) // returns middleware that only parses JSON - may or may
 //___________________
 // Routes
 
-app.post('/twitter', (req, res) => {
+app.post('/', (req, res) => {
   Posts.create(req.body, (err, CreatedPost) => {
     res.json(CreatedPost)
   })
 })
 
-app.get('/twitter', (req, res) => {
+app.get('/', (req, res) => {
   Posts.find({}, (err, foundPost) => {
     res.json(foundPost)
   })
 })
 
-app.delete('/twitter/:id', (req, res) => {
+app.delete('/:id', (req, res) => {
   Posts.findByIdAndRemove(req.params.id, (err, deletedPost) => {
     res.json(deletedPost)
   })
 })
 
-app.put('/twitter/:id', (req, res) => {
+app.put('/:id', (req, res) => {
   Posts.findByIdAndUpdate(req.params.id, req.body, { new: true }, (error, updatedPost) => {
     res.json(updatedPost)
   })
