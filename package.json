@@ -3,7 +3,7 @@
   "version": "1.0.0",
   "engines": {
     "node": "16.18.0"
-  }
+  },
   "description": "Build a full-crud-app with react",
   "main": "server.js",
   "scripts": {
