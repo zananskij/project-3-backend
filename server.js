@@ -11,11 +11,10 @@ const cors = require('cors')
 app.use(express.json())
 app.use(cors())
 
-
 //___________________
 //Port
 
-const Posts = require ('./models/post')
+const Posts = require('./models/post')
 //___________________
 // Allow use of Heroku's port or your own local port, depending on the environment
 const PORT = process.env.PORT
@@ -50,26 +49,26 @@ app.use(express.json()) // returns middleware that only parses JSON - may or may
 //___________________
 // Routes
 
-app.post('/twitter', (req,res)=>{
-  Posts.create(req.body, (err, CreatedPost)=>{
+app.post('/twitter', (req, res) => {
+  Posts.create(req.body, (err, CreatedPost) => {
     res.json(CreatedPost)
   })
 })
 
-app.get('/twitter', (req,res)=>{
-  Posts.find({},(err, foundPost)=>{
+app.get('/twitter', (req, res) => {
+  Posts.find({}, (err, foundPost) => {
     res.json(foundPost)
   })
 })
 
-app.delete('/twitter/:id', (req,res) =>{
-  Posts.findByIdAndRemove(req.params.id,(err, deletedPost)=>{
+app.delete('/twitter/:id', (req, res) => {
+  Posts.findByIdAndRemove(req.params.id, (err, deletedPost) => {
     res.json(deletedPost)
   })
 })
 
-app.put('/twitter/:id', (req,res)=>{
-  Posts.findByIdAndUpdate(req.params.id, req.body, {new:true}, (error,updatedPost)=>{
+app.put('/twitter/:id', (req, res) => {
+  Posts.findByIdAndUpdate(req.params.id, req.body, { new: true }, (error, updatedPost) => {
     res.json(updatedPost)
   })
 })
@@ -81,11 +80,3 @@ app.put('/twitter/:id', (req,res)=>{
 //Listener
 //___________________
 app.listen(3000, () => console.log('Listening on port:', 3000))
-<<<<<<< HEAD
-=======
-
-// mongoose.connect('mongodb://localhost:27017/twitter')
-mongoose.connection.once('open', () => {
-console.log('connected to mongod...')
-})
->>>>>>> 4d07d8eaef41b10b62a01b75cbd95b7fd6b548b2
