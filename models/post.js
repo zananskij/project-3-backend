@@ -3,7 +3,7 @@ const mongoose = require('mongoose')
 const postSchema = new mongoose.Schema({
   post: String,
   img: String,
-  location: { type: { type: String }, coordinates: [Number] },
+  location: String,
   date: { type: String, default: Date },
 })
 
